@@ -1,0 +1,74 @@
+            .contact-box-list {
+                display: flex;
+                margin-left: 84px;
+                align-items: center;
+                flex-wrap: wrap;
+                li+li {
+                    margin-top: 10px;
+                }
+                @media screen and (min-width: 1200px) {
+                    justify-content: center;
+                    li+li {
+                        margin-left: 50px;
+                        margin-top: 0;
+                    }
+                }
+                .contact-box-list__item {
+                    display: flex;
+                }
+                @media screen and (max-width: 767px) {
+                    display: none;
+                }
+                .contact-box-list__item:hover svg {
+                    fill: $theme-color;
+                }
+                .contact-box-list__mail {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $text-secondary;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 1.14;
+                    letter-spacing: 0.02em;
+                    @include transition (color);
+                    &:hover,
+                    &:focus {
+                        color: $theme-color;
+                    }
+                }
+                .contact-box-list__phone {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $text-secondary;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 1.14;
+                    letter-spacing: 0.02em;
+                    @include transition (color);
+                    &:hover,
+                    &:focus {
+                        color: $theme-color;
+                    }
+                }
+                .mail-footer,
+                .phone-footer {
+                    display: flex;
+                    justify-content: left;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 1.71;
+                    letter-spacing: 0.03em;
+                    color: rgba(255, 255, 255, 0.6);
+                }
+                .phys-adress {
+                    color: $text-secondary-lighter !important;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 1.7;
+                    letter-spacing: 0.03em;
+                }
+            }
