@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@400;500;700;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
 </head>
 
@@ -75,10 +75,10 @@
         </button>
         <ul class="mobile-menu-list">
           <li class="mobile-menu-list__item mobile-menu-list__item--current">
-            Студия
-          </li>
-          <li class="mobile-menu-list__item">
-            <a href="./portfolio.html"></a>Портфолио</a>
+            <a href="./index.html">Студия</a>
+                </li>
+                <li class="mobile-menu-list__item">
+                    <a href="./portfolio.html">Портфолио</a>
                 </li>
                 <li class="mobile-menu-list__item">Контакты</li>
             </ul>
@@ -268,19 +268,29 @@
                 <h2 class="services__title">Чем мы занимаемся</h2>
                 <ul class="services__list">
                     <li class="services_item">
-                        <img src="./images/images_main/services1.jpg " alt="программирование " width="370" height="294" />
+                        <img srcset="
+                  ./images/images-desktop/desktopapps.jpg    1x,
+                  ./images/images-desktop/desktopapps@2x.jpg 2x
+                " alt="Десктопные приложения" src="./images/images-desktop/desktopapps.jpg" />
+
                         <div class="services__name">
                             <h3>Десктопные приложения</h3>
                         </div>
                     </li>
                     <li class="services_item">
-                        <img src="./images/images_main/services2.jpg " alt="мобильные версии сайтов " width="370" height="294" />
+                        <img srcset="
+                  ./images/images-desktop/mobileapps.jpg    1x,
+                  ./images/images-desktop/mobileapps@2x.jpg 2x
+                " alt="Мобильные приложения" src="./images/images-desktop/mobileapps.jpg" />
                         <div class="services__name">
                             <h3>Мобильные приложения</h3>
                         </div>
                     </li>
                     <li class="services_item">
-                        <img src="./images/images_main/services3.jpg " alt="разработка приложений " width="370" height="294" />
+                        <img srcset="
+                  ./images/images-desktop/design.jpg    1x,
+                  ./images/images-desktop/design@2x.jpg 2x
+                " alt="Дизайнерские решения" src="./images/images-desktop/design.jpg" />
                         <div class="services__name">
                             <h3>Дизайнерские решения</h3>
                         </div>
@@ -297,7 +307,21 @@
 
                 <ul class="team-members-list">
                     <li class="team-members-list__item">
-                        <img src="./images/images_main/ihor-dem.jpg " alt="Игорь Демьяненко" width="270" height="260" />
+                        <picture>
+                            <source srcset="
+                    ./images/images-mobile/ihordem-mob.jpg    1x,
+                    ./images/images-mobile/ihordem-mob@2x.jpg 2x
+                  " media="(min-width: 320px)" />
+                            <source srcset="
+                    ./images/images-tablet/ihordem-tab.jpg    1x,
+                    ./images/images-tablet/ihordem-tab@2x.jpg 2x
+                  " media="(min-width: 768px)" />
+                            <source srcset="
+                    ./images/images-desktop/ihordem-desk.jpg    1x,
+                    ./images/images-desktop/ihordem-desk@2x.jpg 2x
+                  " media="(min-width: 1200px)" />
+                            <img src="./images/images-mobile/ihordem-mob.jpg" alt="Игорь Демьяненко" />
+                        </picture>
 
                         <div class="team-member-meta">
                             <h3 class="team-member-meta_name">Игорь Демьяненко</h3>
@@ -337,7 +361,22 @@
                         </div>
                     </li>
                     <li class="team-members-list__item">
-                        <img src="./images/images_main/olga-rep.jpg " alt="Ольга Репина" width="270" height="260" />
+                        <picture>
+                            <source srcset="
+                    ./images/images-mobile/olharep-mob.jpg    1x,
+                    ./images/images-mobile/olharep-mob@2x.jpg 2x
+                  " media="(min-width: 320px)" />
+                            <source srcset="
+                    ./images/images-tablet/olharep-tab.jpg    1x,
+                    ./images/images-tablet/olharep-tab@2x.jpg 2x
+                  " media="(min-width: 768px)" />
+                            <source srcset="
+                    ./images/images-desktop/olharep-desk.jpg    1x,
+                    ./images/images-desktop/olharep-desk@2x.jpg 2x
+                  " media="(min-width: 1200px)" />
+                            <img src="./images/images-mobile/olharep-mob.jpg" alt="Ольга Репина" />
+                        </picture>
+
                         <div class="team-member-meta">
                             <h3 class="team-member-meta_name">Ольга Репина</h3>
 
@@ -377,7 +416,22 @@
                         </div>
                     </li>
                     <li class="team-members-list__item">
-                        <img src="./images/images_main/nik-tar.jpg " alt="Николай Тарасов" width="270" height="260" />
+                        <picture>
+                            <source srcset="
+                    ./images/images-mobile/niktarasov-mob.jpg    1x,
+                    ./images/images-mobile/niktarasov-mob@2x.jpg 2x
+                  " media="(min-width: 320px)" />
+                            <source srcset="
+                    ./images/images-tablet/niktarasov-tab.jpg    1x,
+                    ./images/images-tablet/niktarasov-tab@2x.jpg 2x
+                  " media="(min-width: 768px)" />
+                            <source srcset="
+                    ./images/images-desktop/niktarasov-desk.jpg    1x,
+                    ./images/images-desktop/niktarasov-desk@2x.jpg 2x
+                  " media="(min-width: 1200px)" />
+                            <img src="./images/images-mobile/niktarasov-mob.jpg" alt="Николай Тарасов" />
+                        </picture>
+
                         <div class="team-member-meta">
                             <h3 class="team-member-meta_name">Николай Тарасов</h3>
 
@@ -416,7 +470,22 @@
                         </div>
                     </li>
                     <li class="team-members-list__item">
-                        <img src="./images/images_main/mih-er.jpg " alt="Михаил Ермаков" width="270" height="260" />
+                        <picture>
+                            <source srcset="
+                    ./images/images-mobile/mermakov-mob.jpg    1x,
+                    ./images/images-mobile/mermakov-mob@2x.jpg 2x
+                  " media="(min-width: 320px)" />
+                            <source srcset="
+                    ./images/images-tablet/mermakov-tab.jpg    1x,
+                    ./images/images-tablet/mermakov-tab@2x.jpg 2x
+                  " media="(min-width: 768px)" />
+                            <source srcset="
+                    ./images/images-desktop/mermakov-desk.jpg    1x,
+                    ./images/images-desktop/mermakov-desk@2x.jpg 2x
+                  " media="(min-width: 1200px)" />
+                            <img src="./images/images-mobile/mermakov-mob.jpg" alt="Михаил Ермаков" />
+                        </picture>
+
                         <div class="team-member-meta">
                             <h3 class="team-member-meta_name">Михаил Ермаков</h3>
 
