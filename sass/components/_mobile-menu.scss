@@ -1,123 +1,125 @@
-                    .mobile-menu-container {
-                        position: absolute;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        top: 0;
-                        left: 0;
-                        width: 100vw;
-                        height: 100vh;
-                        padding: 48px 35px;
-                        background-color: $text-secondary-lighter;
-                        transform: translateX(100%);
-                        opacity: 0;
-                        transition: transform 250ms ease-in-out;
-                        z-index: 110;
-                        @media screen and (min-width: 480px) {
-                            padding: 48px 48px;
-                        }
-                        @media screen and (min-width: 768px) {
-                            display: none;
-                        }
-                    }
-                    
-                    .mobile-menu-container.is-open {
-                        transform: translateX(0);
-                        opacity: 100%;
-                    }
-                    
-                    .mobile-menu-list {
-                        display: flex;
-                        flex-direction: column;
-                        flex-grow: 1;
-                    }
-                    
-                    .mobile-menu-list__item {
-                        position: relative;
-                        display: inline-block;
-                        width: fit-content;
-                        font-style: normal;
-                        font-weight: 500;
-                        font-size: 30px;
-                        line-height: 1.17;
-                        color: $text-primary;
-                        @include transition (color);
-                        &:not(:last-child) {
-                            margin-bottom: 30px;
-                        }
-                        &:hover {
-                            color: $theme-color;
-                            &:after {
-                                content: '';
-                                position: absolute;
-                                left: 0;
-                                bottom: 0;
-                                height: 1px;
-                                display: block;
-                                width: 100%;
-                                border: 1px solid $theme-color;
-                                border-radius: 2px;
-                                background-color: $theme-color;
-                            }
-                        }
-                        @media screen and (min-width: 480px) {
-                            font-size: 40px;
-                        }
-                    }
-                    
-                    .mobile-menu__contacts {
-                        display: flex;
-                        flex-direction: column;
-                        margin-bottom: 64px;
-                    }
-                    
-                    .mobile-menu__contacts-phone {
-                        display: block;
-                        margin-bottom: 32px;
-                        font-style: normal;
-                        font-weight: 500;
-                        font-size: 25px;
-                        letter-spacing: 0.02em;
-                        color: $theme-color;
-                        @media screen and (min-width: 480px) {
-                            font-size: 34px;
-                        }
-                    }
-                    
-                    .mobile-menu__contacts-mail {
-                        font-style: normal;
-                        font-weight: 500;
-                        font-size: 24px;
-                        line-height: 28px;
-                        letter-spacing: 0.02em;
-                        color: $text-secondary;
-                    }
-                    
-                    .mobile-menu__social-list {
-                        display: flex;
-                        .mobile-menu__social-list-item {
-                            position: relative;
-                            display: block;
-                            font-style: normal;
-                            font-weight: 500;
-                            font-size: 13px;
-                            color: $theme-color;
-                            &:not(:last-child) {
-                                margin-right: 20px;
-                            }
-                            &:not(:last-child):after {
-                                content: '';
-                                position: absolute;
-                                top: 0;
-                                left: 100%;
-                                margin-left: 10px;
-                                width: 1px;
-                                height: 22px;
-                                display: block;
-                                border-left: 1px solid rgba(33, 33, 33, 0.2);
-                            }
-                            @media screen and (min-width: 480px) {
-                                font-size: 18px;
-                            }
-                        }
-                    }
+.mobile-menu-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 35px;
+    background-color: $text-secondary-lighter;
+    transform: translateX(100%);
+    /* opacity: 0; */
+    transition: transform 250ms ease-in-out;
+    z-index: 110;
+    @media screen and (min-width: 480px) {
+        padding: 48px 48px;
+    }
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.mobile-menu-container.is-open {
+    transform: translateX(0);
+    /* opacity: 100%; */
+}
+
+.mobile-menu-list {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.mobile-menu-list__item {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.17;
+    color: $text-primary;
+    @include transition (color);
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    &:hover {
+        color: $theme-color;
+    }
+    @media screen and (min-width: 480px) {
+        font-size: 40px;
+    }
+}
+
+.mobile-menu-list__item--current {
+    color: $theme-color;
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        display: block;
+        width: 100%;
+        border: 2px solid $theme-color;
+        border-radius: 2px;
+        background-color: $theme-color;
+    }
+}
+
+.mobile-menu__contacts {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 64px;
+}
+
+.mobile-menu__contacts-phone {
+    display: block;
+    margin-bottom: 32px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    letter-spacing: 0.02em;
+    color: $theme-color;
+    @media screen and (min-width: 480px) {
+        font-size: 34px;
+    }
+}
+
+.mobile-menu__contacts-mail {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: $text-secondary;
+}
+
+.mobile-menu__social-list {
+    display: flex;
+    .mobile-menu__social-list-item {
+        position: relative;
+        display: block;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        color: $theme-color;
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+        &:not(:last-child):after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 100%;
+            margin-left: 10px;
+            width: 1px;
+            height: 22px;
+            display: block;
+            border-left: 1px solid rgba(33, 33, 33, 0.2);
+        }
+        @media screen and (min-width: 480px) {
+            font-size: 18px;
+        }
+    }
+}
