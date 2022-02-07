@@ -1908,15 +1908,16 @@ header {
     margin-left: 30px;
   }
   .portfolio__item:last-child {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    margin-right: auto;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .portfolio__item {
     width: calc((100% - 3*30px)/3);
+  }
+  .portfolio__item:last-child {
+    margin-right: 0;
   }
 }
 
