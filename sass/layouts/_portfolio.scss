@@ -126,13 +126,16 @@
     border-left: 1px solid rgba(238, 238, 238, 1);
     border-right: 1px solid rgba(238, 238, 238, 1);
     border-radius: 0px 0px 4px 4px;
+    @media screen and(min-width: 720px) {
+        flex-grow: 2;
+    }
 }
 
 .portfolio__link {
     position: relative;
     display: flex;
     flex-direction: column;
-    flex-grow: 2;
+    flex-grow: 1;
     height: 100%;
     overflow: hidden;
     @include transition (box-shadow);
