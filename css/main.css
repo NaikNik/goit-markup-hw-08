@@ -1527,7 +1527,7 @@ header {
 
 @media screen and (min-width: 480px) {
   .customers-list {
-    margin-bottom: 15px;
+    margin-bottom: 0;
     margin-left: -30px;
   }
 }
