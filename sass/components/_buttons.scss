@@ -18,8 +18,12 @@
 }
 
 .portfolio__button {
-    padding-left: 22px;
-    padding-right: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
+    @media screen and (min-width: 382px) {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
 }
 
 .button--first {
