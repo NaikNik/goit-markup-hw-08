@@ -929,7 +929,7 @@ header {
 
 .user-agree:checked + .confirmation__icon {
   content: '';
-  background-image: url(/images/iconcheck.svg);
+  background-image: url(../images/iconcheck.svg);
   background-color: #2996f3;
   background-position: center;
   background-repeat: no-repeat;
