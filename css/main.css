@@ -1498,7 +1498,6 @@ header {
   font-size: 28px;
   line-height: 1.17;
   text-align: center;
-  text-transform: uppercase;
   letter-spacing: 0.03em;
 }
 
@@ -1644,17 +1643,14 @@ header {
   transition: transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
   z-index: 110;
+  /*  @media screen and (min-width: 768px) {
+        display: none;
+    } */
 }
 
 @media screen and (min-width: 480px) {
   .mobile-menu-container {
     padding: 48px 48px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .mobile-menu-container {
-    display: none;
   }
 }
 
@@ -1822,19 +1818,16 @@ header {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 40px;
-}
-
-@media screen and (max-width: 480px) {
-  .portfolio__filter-list {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-line-pack: distribute;
-        align-content: space-around;
-    height: 90px;
-  }
+  /* @media screen and (max-width: 480px) { */
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  height: 90px;
+  /* } */
 }
 
 .portfolio__filter-list .item + .item {
@@ -1845,7 +1838,7 @@ header {
   margin-left: 0;
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 768px) {
   .portfolio__filter-list .item + .item:nth-child(4) {
     margin-left: 8px;
   }
@@ -2149,6 +2142,7 @@ header {
     font-size: 44px;
     line-height: 1.36;
     padding: 0;
+    width: 696px;
   }
 }
 /*# sourceMappingURL=main.css.map */
